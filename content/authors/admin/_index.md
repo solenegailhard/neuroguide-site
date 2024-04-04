@@ -1,24 +1,24 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Solène Gailhard
 
 # Full Name (for SEO)
-first_name: Nelson
-last_name: Bighetti
+first_name: Solène
+last_name: Gailhard
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Master student
 
 # Organizations/Affiliations
 organizations:
-  - name: Stanford University
+  - name: University Claude Bernard Lyon1
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include computational neurosciences, memory and plasticity.
 
 interests:
   - Artificial Intelligence

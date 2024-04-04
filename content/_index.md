@@ -8,14 +8,14 @@ sections:
   - block: hero
     content:
       title: |
-        Wowchemy
-        Research Group
+        NeuroGuide
       image:
         filename: welcome.jpg
       text: |
         <br>
         
-        The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
+        The **NeuroGuide** is a website for student navigating the world of neurosciences, questionning what pathway to choose, what carriers existing. It was developped in April 2024 by 4 students of the Neuroscience Master of the University Lyon 1.
+        Poopooopoooppoooo
   
   - block: collection
     content:
@@ -64,4 +64,17 @@ sections:
         {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
     design:
       columns: '1'
+
+  - block: markdown
+    content:
+      title: Plus d'informations
+      subtitle:
+      text: |
+        <details>
+        <summary>Les neurosciences c'est quoi?</summary>
+
+        Les neurosciences constituent un domaine multidisciplinaire de la science qui étudie le système nerveux, y compris sa structure, sa fonction, son développement, son évolution, ses troubles et ses mécanismes sous-jacents. Ce domaine englobe une vaste gamme de disciplines, allant de la biologie cellulaire et moléculaire à la psychologie et à la philosophie.
+
+        </details>
+
 ---

@@ -1,0 +1,42 @@
+{{ $item := .item }}
+
+{{ $link := $item.RelPermalink }}
+{{ $target := "" }}
+{{ if $item.Params.external_link }}
+  {{ $link = $item.Params.external_link }}
+  {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ end }}
+
+<div class="depliant mb-5">
+  <div class="depliant-content">
+    <div class="depliant-text">
+      <div class="depliant-title">{{ $item.Title }}</div>
+      <p class="depliant-summary">
+        {{ ($item.Params.summary | default $item.Summary) | plainify | htmlUnescape | chomp -}}
+      </p>
+      <a href="javascript:void(0);" class="depliant-read-more">Read More</a>
+      <div class="full-content" style="display: none;">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all elements with the class "depliant-read-more"
+  var readMoreLinks = document.querySelectorAll('.depliant-read-more');
+
+  // Loop through each link
+  readMoreLinks.forEach(function(link) {
+    // Add click event listener
+    link.addEventListener('click', function() {
+      // Get the next sibling of the clicked link (the full content div)
+      var fullContent = this.nextElementSibling;
+
+      // Toggle the display style between "block" and "none"
+      fullContent.style.display = (fullContent.style.display === 'block') ? 'none' : 'block';
+    });
+  });
+});
+</script>
