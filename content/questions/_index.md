@@ -1,14 +1,13 @@
 ---
 title: Questions
-
 type: landing
 
 sections:
   - block: slider
     content:
       slides:
-      - title: 👋 Bienvenue sur notre site NeuroGuide
-        content: Les neurosciences t'intéressent mais tu te noie un peu dans le flot d'information? Retrouve ci-dessous toutes les questions d'étudiants comme toi qui se questionnent sur les parcours, débouchés et autres!
+      - title: "👋 Bienvenue sur notre site NeuroGuide"
+        content: "Les neurosciences t'intéressent mais tu te noie un peu dans le flot d'information? Retrouve ci-dessous les réponses à toutes tes questions"
         align: center
         background:
           image:
@@ -17,8 +16,8 @@ sections:
               brightness: 0.7
           position: right
           color: '#666'
-      - title: Explore et apprends ☕️
-        content: 'Lis les témoignages de professionels passionés dans le domaine!'
+      - title: "Explore & apprends ☕️"
+        content: "Lis les témoignages de professionels passionnés!"
         align: left
         background:
           image:
@@ -27,8 +26,8 @@ sections:
               brightness: 0.7
           position: center
           color: '#555'
-      - title: Centre aux questions
-        content: 'Tu n'as pas trouvé la réponse à ta question ou t'aimerait en savoir plus, n'hésite pas à nous contacter :)'
+      - title: "Centre aux questions"
+        content: ''
         align: right
         background:
           image:
@@ -50,11 +49,10 @@ sections:
       loop: false
       # Duration of transition between slides (in ms)
       interval: 2000
-
   - block: collection
     content:
       title: Questions
-      subtitle:
+      subtitle: Trouveras-tu ta question?
       text:
       count: 5
       filters:
