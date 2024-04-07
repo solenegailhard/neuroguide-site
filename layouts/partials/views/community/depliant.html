@@ -1,21 +1,22 @@
 {{ $item := .item }}
 
-{{ $link := $item.RelPermalink }}
-{{ $target := "" }}
-{{ if $item.Params.external_link }}
-  {{ $link = $item.Params.external_link }}
-  {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ $summary := "" }}
+{{ with $item.Params.summary }}
+  {{ $summary = . | markdownify | emojify }}
+{{ else }}
+  {{ $summary = $item.Summary }}
 {{ end }}
 
-<div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        {{ $item.Title }}
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">{{ .Content }}</div>
+<div class="card">
+  <details>
+    <summary>{{ $item.Title | markdownify | emojify }}</summary>
+
+    <div class="card-text">
+      {{ with $summary }}
+        <div class="article-style">
+          <p>{{ . }}</p>
+        </div>
+      {{ end }}
     </div>
-  </div>
+  </details>
 </div>

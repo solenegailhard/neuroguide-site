@@ -1,32 +1,27 @@
 <style>
-    /* Apply transition to the height property for smooth expansion/collapse */
     details {
-      border: 1px solid #ccc;
       border-radius: 5px;
-      margin-bottom: 10px;
-      overflow: hidden; /* Hide overflow content when collapsed */
+      margin-bottom: 0px;
       transition: height 0.3s ease-out; /* Smooth transition */
     }
-    
-    /* Expand the height of the details element when open */
-    details[open] {
-      height: auto;
-    }
-    
-    /* Style the summary element */
+
     summary {
       cursor: pointer;
       font-weight: bold;
-    }
-    
-    /* Style the content within the details element */
-    details > * {
       padding: 10px;
-      padding-left: 10px;
+      display: block; /* Ensure summary is a block-level element */
     }
-  
-    /* Hide the ::before pseudo-element */
-    details::before {
-      display: none;
+
+    summary::before {
+      content: ''; /* Empty content */
+      display: inline-block;
+      width: 10px; /* Adjust this value as needed */
     }
+
+    details p {
+      margin-left: 0px;
+      padding-left: 0px;
+      border-left: 0px solid rgba(0, 0, 0, 0.8);
+    }
+ 
   </style>
