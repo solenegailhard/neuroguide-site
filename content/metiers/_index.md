@@ -2,7 +2,7 @@
 title: Métiers des neurosciences
 
 # Listing view
-view: community/depliant
+view: ''
 
 # Optional header image (relative to `assets/media/` folder).
 banner:

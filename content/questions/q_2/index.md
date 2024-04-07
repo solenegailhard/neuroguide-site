@@ -1,5 +1,5 @@
 ---
-title: Les neurosciences c'est quoi ? 
+title: C'est quoi une thèse? 
 tags: []
 ---
 
