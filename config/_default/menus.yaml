@@ -5,7 +5,7 @@
 
 main:
   - name: Questions
-    url: tour
+    url: questions
     weight: 10
   - name: Orientation
     url: orientation

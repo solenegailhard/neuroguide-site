@@ -7,36 +7,15 @@
   {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
 {{ end }}
 
-<div class="depliant mb-5">
-  <div class="depliant-content">
-    <div class="depliant-text">
-      <div class="depliant-title">{{ $item.Title }}</div>
-      <p class="depliant-summary">
-        {{ ($item.Params.summary | default $item.Summary) | plainify | htmlUnescape | chomp -}}
-      </p>
-      <a href="javascript:void(0);" class="depliant-read-more">Read More</a>
-      <div class="full-content" style="display: none;">
-        {{ .Content }}
-      </div>
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        {{ $item.Title }}
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">{{ .Content }}</div>
     </div>
   </div>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Get all elements with the class "depliant-read-more"
-  var readMoreLinks = document.querySelectorAll('.depliant-read-more');
-
-  // Loop through each link
-  readMoreLinks.forEach(function(link) {
-    // Add click event listener
-    link.addEventListener('click', function() {
-      // Get the next sibling of the clicked link (the full content div)
-      var fullContent = this.nextElementSibling;
-
-      // Toggle the display style between "block" and "none"
-      fullContent.style.display = (fullContent.style.display === 'block') ? 'none' : 'block';
-    });
-  });
-});
-</script>
