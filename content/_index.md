@@ -10,7 +10,7 @@ sections:
       title: |
         NeuroGuide
       image:
-        filename: welcome.jpg
+        filename: cerveau_question.jpg
       text: |
         <br>
         
