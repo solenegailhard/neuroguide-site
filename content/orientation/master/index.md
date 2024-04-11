@@ -1,9 +1,38 @@
 ---
 title: Parcours-type pour accéder aux Neurosciences 
 tags: []
----
 
-En général pour travailler dans les neurosciences, il faut faire un master de neurosciences. Tu trouveras ici toutes les formations qui peuvent t'amener au master de neurosciences. 
+sections:
+  - block: hero
+    content:
+      title: |
+        Master Neurosicence
+      text: |
+        <br>
+        
+        En général pour travailler dans les neurosciences, il faut faire un master de neurosciences. Tu trouveras ici toutes les formations qui peuvent t'amener au master de neurosciences. 
+
+ - block: markdown
+    content:
+      title:
+      subtitle: ''
+      text: Résumé des parcours empruntables:
+    design:
+      columns: '1'
+      background:
+        image: 
+          filename: Orientation_Master.jpg
+          filters:
+            brightness: 1
+          parallax: false
+          position: center
+          size: cover
+          text_color_light: true
+      spacing:
+        padding: ['20px', '0', '20px', '0']
+      css_class: fullscreen
+
+---
 
 <!--more-->
 
